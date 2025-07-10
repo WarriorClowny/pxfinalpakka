@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelRaid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css" />
+  <style>
+    body {
+      color: #ccc;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    /* Home Button with Animated Icon */
+    .home-link {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #00ffff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-family: 'Share Tech Mono', monospace;
+      transition: 0.3s ease;
+      z-index: 9999;
+      box-shadow: 0 0 5px #00ffff55;
+    }
+
+    .home-link:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 10px #00ffffaa;
+    }
+
+    .home-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .home-icon .door {
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+
+    .home-icon .window {
+      transform: scale(1);
+      transform-origin: center;
+      transition: transform 0.4s ease;
+    }
+
+    .home-link:hover .home-icon .door {
+      transform: rotateY(120deg);
+    }
+
+    .home-link:hover .home-icon .window {
+      transform: scale(1.5);
+    }
+
+    .about-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 100px;
+    }
+
+    .about-title a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .about-title a:hover {
+      text-decoration: underline;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffff55;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 1rem;
+      color: #888;
+    }
+
+    footer a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Custom SVG Animated Home Button -->
+  <a class="home-link" href="index.html">
+    <svg class="home-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- House base -->
+      <path d="M8 28L32 8L56 28V56H8V28Z" stroke="#00ffff" stroke-width="3" fill="none" />
+
+      <!-- Door -->
+      <rect class="door" x="28" y="38" width="8" height="18" fill="#00ffff" />
+
+      <!-- Left window -->
+      <rect class="window" x="16" y="34" width="6" height="6" fill="#00ffff" />
+
+      <!-- Right window -->
+      <rect class="window" x="42" y="34" width="6" height="6" fill="#00ffff" />
+    </svg>
+    Home
+  </a>
+
+  <header>Welcome to PixelRaid</header>
+
+  <section>
+    <div class="services">
+      <a class="card" href="services.html">Services</a>
+      <a class="card" href="tools.html">Tools</a>
+      <a class="card" href="contact.html">Contact</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <div class="about-title">
+    About <a href="https://example.com" target="_blank">PixelRaid</a>
+  </div>
+
+  <div class="about-box">
+    PixelRaid is a forward-thinking digital agency dedicated to providing a wide array of development services tailored
+    for online communities and gaming platforms. Our mission is to deliver high-quality solutions that empower creators,
+    server owners, and community managers. We specialize in Discord development, offering custom bots, automation tools,
+    and moderation systems to help servers operate smoothly and securely. Additionally, our team is experienced in
+    Minecraft development, ranging from creating optimized Minecraft servers to building custom hacked clients and
+    resource packs that enhance gameplay and user experience.<br><br>
+
+    Our agency also provides legal and secure tools for Discord, custom scripts, and utilities that can boost
+    productivity and engagement across your community. We stand out with our personalized approach and our dedication to
+    understanding our clients' unique needs. We ensure every project—big or small—is handled with precision and
+    creativity.<br><br>
+
+    At PixelRaid, affordability meets performance. We offer premium Minecraft accounts and custom setups at competitive
+    prices. Our Valorant account offerings are perfect for gamers looking to start fresh or gain a competitive edge, all
+    at very reasonable rates.<br><br>
+
+    Whether you're building a new community, improving an existing one, or simply need reliable tools and development
+    support, PixelRaid is here to help. We believe in innovation, transparency, and community growth. Every line of code
+    we write is tailored for efficiency and designed with scalability in mind. Join us today and elevate your digital
+    projects with PixelRaid's trusted services and support. We look forward to helping you grow, game, and thrive in the
+    online world.
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Made By <a href="https://discord.gg/inviteCodeHere" target="_blank">WarriorClowny96</a>
+  </footer>
+
+  <script src="static/matrix.js"></script>
+</body>
+
+</html>
